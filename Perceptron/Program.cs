@@ -29,5 +29,7 @@ namespace Perceptron
         {
             return rl > 0 ? 1 : 0;
         }
+
+
     }
 }
