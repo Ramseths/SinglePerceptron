@@ -9,7 +9,7 @@ namespace Perceptron
             // Weights de la ANN
             double w1, w2;
             double umbral;
-
+            int recorrido = 0;
             Random r = new Random();
             bool state = false;
             // Comprobar los weights
@@ -22,7 +22,7 @@ namespace Perceptron
                 umbral = r.NextDouble() - r.NextDouble();
 
                 // Resultados
-                Console.WriteLine("\n ###################");
+                Console.WriteLine("\n ------------- {0} -------------", recorrido);
                 Console.WriteLine("W1 = {0}", w1);
                 Console.WriteLine("W2 = {0}", w2);
                 Console.WriteLine("Umbral = {0}", umbral);
@@ -54,8 +54,9 @@ namespace Perceptron
                 {
                     state = false;
                 }
-
+                recorrido++;
             }
+            Console.ReadKey();
         }
 
         public static double sigmoide(double rl)
